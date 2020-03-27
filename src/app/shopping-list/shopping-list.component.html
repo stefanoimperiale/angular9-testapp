@@ -8,6 +8,7 @@
          style="cursor: pointer"
          *ngFor="let ingredient of (shoppingListState | async).ingredients; let i = index"
          (click)="onEditItem(i)"
+         [@slideIn]
       >
         {{ingredient.name}} ({{ingredient.amount}})
       </a>
