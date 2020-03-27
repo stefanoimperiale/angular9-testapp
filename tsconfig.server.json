@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app-server",
+    "module": "commonjs",
+    "types": [
+      "node"
+    ]
+  },
+  "files": [
+    "src/main.server.ts",
+    "server.ts"
+  ],
+  "angularCompilerOptions": {
+    "entryModule": "./src/app/app.server.module#AppServerModule"
+  },
+  "externalDependencies": [
+    "grpc",
+    "@grpc/proto-loader",
+    "@angular/fire/firestore",
+    "firebase/firestore"
+  ]
+}
